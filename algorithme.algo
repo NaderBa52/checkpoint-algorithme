@@ -1,0 +1,22 @@
+ALGORITHM test
+VAR
+      ch:STRING
+    nv:INTEGER=0
+    i:INTEGER=0
+    nw,l:INTEGER=1
+BEGIN
+    Read(ch)
+WHILE (ch[i]<>'.') DO
+    i:=i+1
+    l++
+    IF (ch[i]=' ') THEN
+        nw:=nw+1
+    END_IF
+    IF (ch[i]in['a','A','e','E','i','I','u','U','o','O','y','Y']) THEN
+        nv:=nv+1
+       END_IF
+    END_WHILE
+    Write("les nombre des mots est:",nw)
+      Write("les nombres des voyels est :",nv)
+        Write("les nombres des caractèrs est:",l)
+END
